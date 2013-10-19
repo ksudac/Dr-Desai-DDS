@@ -1,63 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-
-<title>Dublin Plaza Dental</title>
-
-<link rel="stylesheet" href="css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="css/desai.css" />
-<link rel="shortcut icon" href="img/favicon.png" />
-
-<!--[if gt IE 7]>
-	<link rel="stylesheet" type="text/css" href="css/ie_desai.css" />
-<![endif]-->
-<!--[if gte IE 8]>
-	<link rel="stylesheet" type="text/css" href="css/ie_desai.css" />
-<![endif]-->
-
-
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> 
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-   $('.carousel').carousel({
-	interval: 3000});
-});
-</script>
-
-</head>
+<?php 
+ require_once dirname(__FILE__).'/header.php';
+?>
 
 <body>
-
+ 
 <div id="wrapper">
-  
-<div class="banner down_shadow">
-    <div class="row-fluid banner_inner">
-        <div class="span1"></div>
-	<div class="span3">
-            <br />
-            <br />
-            <a href="index.html"><img src="img/logo.png" alt="" /></a>
-        </div>
-
-        <div class="span7 pagination-right">
-            <div class="top_nav">
-                <a href="index.html" class="selected short">HOME</a>
-                <a href="about.html" class="medium">ABOUT US</a>
-                <a href="services.html" class="medium">SERVICES</a>
-                <a href="resources.html" class="long">RESOURCES</a>
-                <a href="contact.html" class="long">CONTACT US</a>
-            </div>
-        </div>
-        <div class="span1"></div>
-    </div>    
-</div>
+ 
+<?php
+ $current_page = 'home';
+ require_once dirname(__FILE__).'/banner.php';
+?>
 
 
+
+
+
+<!-- Start Main Content-->  
 <div class="row-fluid">
 <div class="span1"></div>
 <div class="span10">   
@@ -82,18 +40,18 @@ $(document).ready(function(){
     </div>
     
     <div class="contact_ribbon ribbon down_shadow">
-        <img src="img/contact_ribbon_left_side.png" alt="" class="ribbon_left"/>
-        <img src="img/contact_ribbon_right_side.png" alt="" class="ribbon_right" />
+        <img src="img/contact_ribbon_left_side.png" alt="ribbon" class="ribbon_left"/>
+        <img src="img/contact_ribbon_right_side.png" alt="ribbon" class="ribbon_right" />
         <div class="row-fluid">
             <div class="span1">
-               <img class="contact_image" src="img/icon_contact" alt="" />
+               <img class="contact_image" src="img/icon_contact.png" alt="contact" />
             </div>
             <div class="span7">
                 <h1>Call today to schedule an appointment</h1>
                 <h4 style="margin-top:-10px;">We look forward to meeting you!</h4>
             </div>
             <div class="span3 pagination-right contact_us">
-                <a href="contact.html"><button class="rounded" type="submit">Contact Us <img src="img/icon_arrow" alt="" /></button></a>
+                <a href="contact.php"><button class="rounded" type="submit">Contact Us <img src="img/icon_arrow.png" alt="arrow" /></button></a>
             </div> 
         </div>
     </div>
@@ -108,15 +66,15 @@ $(document).ready(function(){
 
     </div>
     <div class="span3">
-        <img src="img/the_dentist.jpg" class="shadow health_icon dentist_img" style="margin-top:25px;" alt="" />
+        <img src="img/the_dentist.jpg" class="shadow health_icon dentist_img" style="margin-top:25px;" alt="dentist" />
     </div>
     
     <br />
     <div class="span4">
         <div class="row-fluid pill_nav rounded">
-            <a href="services.html">
+            <a href="services.php">
                 <div class="span3 icon">
-                    <img src="img/icon_tools.png" alt="" />
+                    <img src="img/icon_tools.png" alt="icon" />
                 </div>
                 <div class="span9 title">
                     <h3>Services</h3>
@@ -127,7 +85,7 @@ $(document).ready(function(){
         <div class="row-fluid pill_nav rounded">
             <a href="new_patient_form.php">
                 <div class="span3 icon">
-                    <img src="img/icon_toothbrush.png" alt="" />
+                    <img src="img/icon_toothbrush.png" alt="icon" />
                 </div>
                 <div class="span9 title">
                     <h3>New Patient Forms</h3>
@@ -136,12 +94,12 @@ $(document).ready(function(){
         </div>
         
         <div class="row-fluid pill_nav rounded">
-            <a href="about.html">
+            <a href="hippa_policy.php">
                 <div class="span3 icon">
-                    <img src="img/icon_smile.png" alt="" />
+                    <img src="img/icon_smile.png" alt="icon" />
                 </div>
                 <div class="span9 title">
-                    <h3>Office Tour</h3>
+                    <h3 style="line-height: 18pt;">Download Our <br /> HIPAA Policy</h3>
                 </div>
             </a>
         </div>
@@ -149,16 +107,19 @@ $(document).ready(function(){
            
     <div class="span1"></div>
 </div>
-
-</div>
+<div class="mobile-spacer"></div>
 <br /><br /><br />
+</div>
 </div>
 <div class="span1"></div>
 </div>  
+<!-- End Main Content-->
 
-<div class="footer pagination-centered">
-    <br />&copy; 2013  Dublin Plaza Dental - All Rights Reserved
-</div>
+
+
+<?php 
+ require_once dirname(__FILE__).'/footer.php';
+?>
 
 </div>
 </body>
